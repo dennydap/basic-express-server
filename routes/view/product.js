@@ -10,4 +10,11 @@ router.get('/', function (req, res) {
     })
 })
 
+router.get('/:product_name', function (req, res) {
+    res.status(200).json({
+        success: true,
+        message: 'This is ' + req.params.product_name + ' page!'
+    })
+})
+
 module.exports = router;
